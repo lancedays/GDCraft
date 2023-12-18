@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b81imke21ifmd"]
+
+[ext_resource type="Texture2D" uid="uid://dkqjwmehwu6ys" path="res://assets/dirt.jpg" id="1_5qmvo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8f1od"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4bww"]
+albedo_texture = ExtResource("1_5qmvo")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oyjio"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_s4bww")
+
+[node name="block" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_8f1od")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_oyjio")

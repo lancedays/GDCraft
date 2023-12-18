@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://4ogmww2uphu1"]
+[gd_scene load_steps=3 format=3 uid="uid://jbuy1b43f5ir"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_n48p7"]
+[ext_resource type="PackedScene" uid="uid://d1htcoc62w1ta" path="res://scenes/player.tscn" id="2_narl3"]
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_n48p7")
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_narl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
