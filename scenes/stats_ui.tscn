@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxfvdpa7o113d"]
+
+[ext_resource type="Script" path="res://scripts/stats_ui.gd" id="1_2p8fy"]
+
+[node name="StatsUI" type="CanvasLayer"]
+script = ExtResource("1_2p8fy")
+
+[node name="FPSLabel" type="Label" parent="."]
+offset_left = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+text = "FPS: "
+
+[node name="CoordsLabel" type="Label" parent="."]
+offset_left = 80.0
+offset_right = 152.0
+offset_bottom = 23.0
+text = "Pos: "

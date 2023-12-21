@@ -1,12 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://jbuy1b43f5ir"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_n48p7"]
-[ext_resource type="PackedScene" uid="uid://d1htcoc62w1ta" path="res://scenes/player.tscn" id="2_narl3"]
+[ext_resource type="PackedScene" uid="uid://dxfvdpa7o113d" path="res://scenes/stats_ui.tscn" id="2_xk8bg"]
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_n48p7")
 
-[node name="Blocks" type="Node3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.294824, 0.955552, 0, -0.955552, 0.294824, 0, 200, 0)
 
-[node name="Player" parent="." instance=ExtResource("2_narl3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+[node name="StatsUI" parent="." instance=ExtResource("2_xk8bg")]
+
+[node name="Blocks" type="Node3D" parent="."]

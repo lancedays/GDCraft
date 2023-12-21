@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b81imke21ifmd"]
+[gd_scene load_steps=6 format=3 uid="uid://b81imke21ifmd"]
 
+[ext_resource type="Script" path="res://scripts/block.gd" id="1_2fy4t"]
 [ext_resource type="Texture2D" uid="uid://dkqjwmehwu6ys" path="res://assets/dirt.jpg" id="1_5qmvo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8f1od"]
@@ -13,6 +14,7 @@ lightmap_size_hint = Vector2i(14, 21)
 material = SubResource("StandardMaterial3D_s4bww")
 
 [node name="block" type="StaticBody3D"]
+script = ExtResource("1_2fy4t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_8f1od")
